@@ -1,0 +1,197 @@
+/* Global Button Styles */
+button[class*="bg-primary"],
+a[class*="bg-primary"],
+input[type="submit"][class*="bg-primary"] {
+  background-color: #F61212;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+button[class*="bg-primary"]:hover,
+a[class*="bg-primary"]:hover,
+input[type="submit"][class*="bg-primary"]:hover {
+  background-color: #b30d0d;
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(179, 13, 13, 0.6);
+}
+
+/* Star Border animation (adapted from React Bits, sharp corners per design system) */
+.star-border-container {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  padding: 2px 0;
+}
+
+.star-border-container .border-gradient-bottom {
+  position: absolute;
+  width: 300%;
+  height: 50%;
+  opacity: 0.7;
+  bottom: -12px;
+  right: -250%;
+  border-radius: 50%;
+  animation: star-movement-bottom linear infinite alternate;
+  z-index: 0;
+}
+
+.star-border-container .border-gradient-top {
+  position: absolute;
+  opacity: 0.7;
+  width: 300%;
+  height: 50%;
+  top: -12px;
+  left: -250%;
+  border-radius: 50%;
+  animation: star-movement-top linear infinite alternate;
+  z-index: 0;
+}
+
+.star-border-container .inner-content {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes star-movement-bottom {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-100%, 0%);
+    opacity: 0;
+  }
+}
+
+@keyframes star-movement-top {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(100%, 0%);
+    opacity: 0;
+  }
+}
+
+/* Magic Bento (React Bits) adapted: cursor spotlight + border glow + particles */
+[data-magic-bento] {
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  --glow-x: 50%;
+  --glow-y: 50%;
+  --glow-intensity: 0;
+  --glow-radius: 300px;
+  --glow-color: 246, 18, 18;
+}
+
+[data-magic-bento]::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  background: radial-gradient(
+    var(--glow-radius) circle at var(--glow-x) var(--glow-y),
+    rgba(var(--glow-color), calc(var(--glow-intensity) * 0.9)) 0%,
+    rgba(var(--glow-color), calc(var(--glow-intensity) * 0.4)) 30%,
+    transparent 60%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.bento-global-spotlight {
+  position: fixed;
+  width: 800px;
+  height: 800px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 150;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+}
+
+@media (max-width: 768px) {
+  [data-magic-bento]::after,
+  .bento-global-spotlight {
+    display: none;
+  }
+}
+
+/* Form Elements */
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #F61212;
+}
+
+/* Logo Loop (adapted from React Bits, vanilla JS/CSS) */
+.logoloop {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  --logoloop-gap: 64px;
+  --logoloop-logoHeight: 64px;
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.logoloop__track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  user-select: none;
+}
+
+.logoloop__list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.logoloop__item {
+  flex: 0 0 auto;
+  margin-right: var(--logoloop-gap);
+  display: flex;
+  align-items: center;
+}
+
+.logoloop__item img {
+  height: var(--logoloop-logoHeight);
+  width: auto;
+  display: block;
+  object-fit: contain;
+  opacity: 0.6;
+  pointer-events: none;
+  -webkit-user-drag: none;
+  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logoloop__item:hover img {
+  opacity: 1;
+  transform: scale(1.12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logoloop__track {
+    transform: none !important;
+  }
+}
+
+/* Checkbox and Radio Accent */
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  accent-color: #F61212;
+}

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Starks | Contacto - Renta de Motocicletas de Alto Rendimiento</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700&amp;family=JetBrains+Mono:wght@500&amp;family=Montserrat:ital,wght@0,700;0,800;0,900;1,900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="./styles/global.css" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-glow {
+            text-shadow: 0 0 10px rgba(246, 18, 18, 0.5);
+        }
+        .blur-text .blur-word {
+            display: inline-block;
+            filter: blur(10px);
+            opacity: 0;
+            transform: translateY(-40px);
+            transition: filter 0.6s cubic-bezier(.22,.68,0,1), opacity 0.6s cubic-bezier(.22,.68,0,1), transform 0.6s cubic-bezier(.22,.68,0,1);
+        }
+        .blur-text--bottom .blur-word {
+            transform: translateY(40px);
+        }
+        .blur-text.in-view .blur-word {
+            filter: blur(0);
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ffb4ab",
+                        "surface-container": "#201f1f",
+                        "on-secondary-fixed": "#1b1b1e",
+                        "surface-container-lowest": "#0e0e0e",
+                        "tertiary-fixed-dim": "#50d7f3",
+                        "secondary-fixed-dim": "#c8c6c9",
+                        "surface": "#131313",
+                        "secondary-container": "#47464a",
+                        "on-error-container": "#ffdad6",
+                        "surface-variant": "#353534",
+                        "text-low-emphasis": "#EDEDED",
+                        "primary-fixed-dim": "#F61212",
+                        "surface-container-high": "#2a2a2a",
+                        "inverse-surface": "#e5e2e1",
+                        "background": "#131313",
+                        "error-container": "#93000a",
+                        "secondary-fixed": "#e4e1e5",
+                        "surface-container-highest": "#353534",
+                        "on-tertiary-fixed-variant": "#004e5b",
+                        "on-primary-fixed": "#001f27",
+                        "on-secondary": "#303033",
+                        "on-secondary-container": "#b6b4b8",
+                        "secondary": "#c8c6c9",
+                        "surface-tint": "#F61212",
+                        "primary-container": "#00b4d8",
+                        "on-primary-container": "#00414f",
+                        "on-surface-variant": "#bcc9ce",
+                        "on-secondary-fixed-variant": "#47464a",
+                        "on-tertiary": "#00363f",
+                        "outline-variant": "#3d494d",
+                        "surface-card": "#1C1C1C",
+                        "text-high-emphasis": "#FFFFFF",
+                        "on-primary": "#003642",
+                        "primary-fixed": "#b3ebff",
+                        "on-tertiary-fixed": "#001f26",
+                        "on-background": "#e5e2e1",
+                        "outline": "#869398",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-bright": "#3a3939",
+                        "tertiary": "#50d7f3",
+                        "tertiary-container": "#12b5d0",
+                        "on-surface": "#e5e2e1",
+                        "inverse-primary": "#00677d",
+                        "on-tertiary-container": "#00414d",
+                        "on-error": "#690005",
+                        "inverse-on-surface": "#313030",
+                        "primary": "#F61212",
+                        "on-primary-fixed-variant": "#004e5f",
+                        "surface-dim": "#131313",
+                        "tertiary-fixed": "#a8edff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "8rem",
+                        "mobile-margin": "1.25rem",
+                        "content-stack": "1rem",
+                        "grid-margin": "4rem",
+                        "grid-gutter": "1.5rem"
+                    },
+                    "fontFamily": {
+                        "display-xl-mobile": ["Montserrat"],
+                        "label-technical": ["JetBrains Mono"],
+                        "display-xl": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "cta-text": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "display-xl-mobile": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "900" }],
+                        "label-technical": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "display-xl": ["84px", { "lineHeight": "90px", "letterSpacing": "-0.04em", "fontWeight": "900" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "cta-text": ["16px", { "lineHeight": "20px", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "38px", "fontWeight": "800" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased overflow-x-hidden selection:bg-primary selection:text-on-primary">
+<script src="./components/header.js"></script>
+<script defer="" src="./components/blur-text.js"></script>
+<!-- TopNavBar -->
+<nav class="bg-surface-container/80 backdrop-blur-xl dark:bg-surface-container/80 docked full-width top-0 sticky z-50 border-b border-white/10 flat no shadows flex justify-between items-center px-grid-margin w-full h-20 transition-all duration-300">
+<div class="flex items-center gap-8">
+<a class="flex items-center hover:scale-95 transition-transform duration-300" href="./code.html"><img alt="Grupo CSF" class="h-10 w-auto object-contain" src="./img/csfgrouplogo.png"/></a>
+<div class="hidden md:flex gap-8 items-center ml-8">
+<a class="text-on-surface-variant font-medium font-label-technical text-label-technical uppercase tracking-widest hover:text-primary transition-colors duration-300" href="./code.html#inicio">Inicio</a>
+<a class="text-on-surface-variant font-medium font-label-technical text-label-technical uppercase tracking-widest hover:text-primary transition-colors duration-300" href="./code.html#flota">Flota</a>
+<a class="text-on-surface-variant font-medium font-label-technical text-label-technical uppercase tracking-widest hover:text-primary transition-colors duration-300" href="./nosotros.html">Nosotros</a>
+<a class="text-primary border-b-2 border-primary font-bold font-label-technical text-label-technical uppercase tracking-widest hover:text-primary transition-colors duration-300" href="#contacto">Contacto</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex gap-4">
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-300"><span class="material-symbols-outlined" data-icon="search">search</span></button>
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-300"><span class="material-symbols-outlined" data-icon="person">person</span></button>
+</div>
+<a class="hidden md:inline-flex bg-primary text-on-primary px-8 py-3 font-cta-text text-cta-text uppercase tracking-widest  transition-colors duration-300 hover:shadow-[0_0_15px_rgba(246,18,18,0.4)]" href="#contacto">RESERVAR AHORA</a>
+<button class="md:hidden text-on-surface hover:text-primary"><span class="material-symbols-outlined">menu</span></button>
+</div>
+</nav>
+
+<!-- Hero Section -->
+<header class="relative min-h-[60vh] flex items-center justify-center overflow-hidden" id="contacto">
+<div class="absolute inset-0 z-0">
+<img alt="Contacto Starks" class="w-full h-full object-cover object-center opacity-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0toLf6_p0B1rubvRIADlHjQKkKGd40MOFUuO5euAgZeN54hvOaNgXTGsvQAJw58wz8f3ufTd3NgUXQmn0UIGy-bJZtbDRaLH5MC0miJG1KlDfqzYJHJhmIyx_xA6n8zGvLLld92L9d9uQIMvDyt1tm1sYuxoXSN000g3K-2rSDYrS1TSzFX1z9mWUiLHYG5xysde4RTL4lWZBWGC69bK_HuyDzLlTHh2EcGxl8v_EQ6l7_eRqyjJrcf9so0akCdh-4FEKuLNYNKo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 w-full max-w-7xl px-mobile-margin md:px-grid-margin text-center mt-20">
+<div class="flex flex-col items-center w-fit mx-auto">
+<span class="font-label-technical text-label-technical text-primary uppercase blur-text"><span class="blur-word">Estamos</span> <span class="blur-word">Aquí</span></span>
+<span class="w-1/2 h-px bg-primary my-3"></span>
+<h1 class="font-display-xl-mobile text-display-xl-mobile md:font-display-xl md:text-display-xl text-text-high-emphasis uppercase italic leading-none blur-text"><span class="blur-word">Contáctanos</span><br/><span class="text-primary text-glow"><span class="blur-word">CSF</span> <span class="blur-word">GROUP</span></span></h1>
+</div>
+<p class="font-body-lg text-body-lg text-text-low-emphasis max-w-2xl mt-8 mx-auto blur-text blur-text--bottom"><span class="blur-word">¿Tienes</span> <span class="blur-word">preguntas</span> <span class="blur-word">sobre</span> <span class="blur-word">alguna</span> <span class="blur-word">de</span> <span class="blur-word">nuestras</span> <span class="blur-word">empresas?</span> <span class="blur-word">Escríbenos,</span> <span class="blur-word">estamos</span> <span class="blur-word">para</span> <span class="blur-word">ayudarte.</span></p>
+</div>
+</header>
+
+<!-- Contact Form Section -->
+<section class="py-section-gap px-mobile-margin md:px-grid-margin max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Contact Info -->
+<div class="md:col-span-1 space-y-8">
+<div class="bg-surface-container p-8 border-l-4 border-primary">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">location_on</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-text-high-emphasis">Ubicación</h3>
+<p class="font-body-md text-body-md text-text-low-emphasis">Cra. 43A #31 55, La Candelaria, Medellín, La Candelaria, Medellín, Antioquia, Colombia</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container p-8 border-l-4 border-primary">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">phone</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-text-high-emphasis">Teléfono</h3>
+<p class="font-body-md text-body-md text-text-low-emphasis">+57 310 816 4849</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container p-8 border-l-4 border-primary">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">mail</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-text-high-emphasis">Email</h3>
+<p class="font-body-md text-body-md text-text-low-emphasis">David@CSFrentals.com</p>
+<p class="font-body-md text-body-md text-text-low-emphasis">Alejandro@CSFrentals.com</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container p-8 border-l-4 border-primary">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">schedule</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-text-high-emphasis">Horarios</h3>
+<p class="font-body-md text-body-md text-text-low-emphasis">Lunes – Viernes: 09:00AM – 06:00PM</p>
+<p class="font-body-md text-body-md text-text-low-emphasis">Sábado: 09:00AM – 02:00PM</p>
+<p class="font-body-md text-body-md text-text-low-emphasis">Domingo: Cerrado</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Contact Form -->
+<div class="md:col-span-2">
+<form class="space-y-6 bg-surface-container p-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block font-body-md text-text-high-emphasis mb-2">Nombre Completo</label>
+<input type="text" class="w-full bg-surface-container-low border border-outline-variant text-text-high-emphasis px-4 py-3 focus:outline-none focus:border-primary transition-colors" placeholder="Tu nombre"/>
+</div>
+<div>
+<label class="block font-body-md text-text-high-emphasis mb-2">Email</label>
+<input type="email" class="w-full bg-surface-container-low border border-outline-variant text-text-high-emphasis px-4 py-3 focus:outline-none focus:border-primary transition-colors" placeholder="tu@email.com"/>
+</div>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block font-body-md text-text-high-emphasis mb-2">Teléfono</label>
+<input type="tel" class="w-full bg-surface-container-low border border-outline-variant text-text-high-emphasis px-4 py-3 focus:outline-none focus:border-primary transition-colors" placeholder="+1 (555) 123-4567"/>
+</div>
+<div>
+<label class="block font-body-md text-text-high-emphasis mb-2">Tipo de Consulta</label>
+<select class="w-full bg-surface-container-low border border-outline-variant text-text-high-emphasis px-4 py-3 focus:outline-none focus:border-primary transition-colors">
+<option value="">Selecciona una opción</option>
+<option value="rental">Reservar una Moto</option>
+<option value="info">Información General</option>
+<option value="corporate">Eventos Corporativos</option>
+<option value="other">Otro</option>
+</select>
+</div>
+</div>
+
+<div>
+<label class="block font-body-md text-text-high-emphasis mb-2">Mensaje</label>
+<textarea class="w-full bg-surface-container-low border border-outline-variant text-text-high-emphasis px-4 py-3 focus:outline-none focus:border-primary transition-colors h-32 resize-none" placeholder="Cuéntanos tu experiencia y qué necesitas..."></textarea>
+</div>
+
+<div class="flex items-center gap-3">
+<input type="checkbox" id="terms" class="w-4 h-4 accent-primary"/>
+<label for="terms" class="font-body-md text-text-low-emphasis">Acepto los términos y política de privacidad</label>
+</div>
+
+<button type="submit" class="w-full bg-primary text-on-primary px-10 py-5 font-cta-text text-cta-text uppercase tracking-widest  transition-all duration-300 hover:shadow-[0_0_20px_rgba(246,18,18,0.6)]">
+Enviar Mensaje
+</button>
+</form>
+</div>
+</div>
+</section>
+
+<!-- Map Section -->
+<section class="py-section-gap bg-surface-container-lowest px-mobile-margin md:px-grid-margin">
+<div class="max-w-7xl mx-auto">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-text-high-emphasis uppercase italic text-center mb-8">Ubícanos en el <span class="text-primary">MAPA</span></h2>
+<div class="w-full h-96 bg-surface-container rounded-lg overflow-hidden border border-outline-variant">
+<iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d234.89!2d-75.5702072!3d6.2317538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4429e326bdf5d9%3A0xf6356aa8973fb61e!2sCSF%20Rentals%20S.A.S%20-%20Alquiler%20de%20motos%20en%20Medellin!5e0!3m2!1ses!2sco!4v1"
+    width="100%"
+    height="100%"
+    style="border: none; filter: brightness(0.85) contrast(1.1) saturate(0.9); display: block;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+</div>
+</div>
+</section>
+
+<!-- FAQ Quick -->
+<section class="py-section-gap px-mobile-margin md:px-grid-margin max-w-4xl mx-auto">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-text-high-emphasis uppercase italic text-center mb-12">Preguntas <span class="text-primary">Frecuentes</span></h2>
+<div class="space-y-4">
+<details class="bg-surface-container p-6 group cursor-pointer border-l-2 border-transparent hover:border-primary transition-colors">
+<summary class="font-cta-text text-cta-text text-text-high-emphasis flex justify-between items-center outline-none">
+                ¿Cuál es el tiempo de respuesta?
+                <span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-text-low-emphasis mt-4 pt-4 border-t border-white/10">Respondemos a todas las consultas dentro de 2 horas durante horario laboral.</p>
+</details>
+<details class="bg-surface-container p-6 group cursor-pointer border-l-2 border-transparent hover:border-primary transition-colors">
+<summary class="font-cta-text text-cta-text text-text-high-emphasis flex justify-between items-center outline-none">
+                ¿Puedo agendar una cita?
+                <span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-text-low-emphasis mt-4 pt-4 border-t border-white/10">Sí, puedes agendar una cita directamente desde el formulario o llamándonos.</p>
+</details>
+<details class="bg-surface-container p-6 group cursor-pointer border-l-2 border-transparent hover:border-primary transition-colors">
+<summary class="font-cta-text text-cta-text text-text-high-emphasis flex justify-between items-center outline-none">
+                ¿Hay descuentos para grupos?
+                <span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-text-low-emphasis mt-4 pt-4 border-t border-white/10">Sí, tenemos tarifas especiales para eventos corporativos y grupos de 5 o más personas.</p>
+</details>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest full-width bottom-0 bg-surface-container-high border-t border-white/5 flat no shadows flex flex-col md:flex-row justify-between items-center py-12 px-grid-margin gap-content-stack w-full mt-section-gap">
+<div class="flex flex-col items-center md:items-start gap-4">
+<img alt="Grupo CSF" class="h-20 w-auto object-contain" src="./img/csfgrouplogo.png"/>
+<p class="font-label-technical text-label-technical text-on-surface-variant">© 2026 GRUPO CSF. MOVEMOS OPORTUNIDADES, CONSTRUIMOS FUTURO.</p>
+<p class="font-label-technical text-label-technical text-on-surface-variant/70 text-xs">GRUPO CSF S.A.S. · NIT [PENDIENTE] · Medellín, Colombia</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-label-technical text-label-technical text-on-surface-variant hover:text-tertiary transition-all duration-200" href="#">Términos de Servicio</a>
+<a class="font-label-technical text-label-technical text-on-surface-variant hover:text-tertiary transition-all duration-200" href="#">Política de Privacidad</a>
+<a class="font-label-technical text-label-technical text-on-surface-variant hover:text-tertiary transition-all duration-200" href="#">Soporte Técnico</a>
+<a class="font-label-technical text-label-technical text-on-surface-variant hover:text-tertiary transition-all duration-200" href="#">Preguntas Frecuentes</a>
+</div>
+</footer>
+</body></html>

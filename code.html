@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Grupo CSF | Movemos oportunidades, construimos futuro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700&amp;family=JetBrains+Mono:wght@500&amp;family=Montserrat:ital,wght@0,700;0,800;0,900;1,900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="./styles/global.css" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-glow {
+            text-shadow: 0 0 10px rgba(246, 18, 18, 0.5);
+        }
+        .split-parent { overflow: hidden; }
+        .hero-logo-anim { opacity: 0; }
+        [data-animate-content] { visibility: hidden; }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ffb4ab",
+                        "surface-container": "#201f1f",
+                        "on-secondary-fixed": "#1b1b1e",
+                        "surface-container-lowest": "#0e0e0e",
+                        "tertiary-fixed-dim": "#50d7f3",
+                        "secondary-fixed-dim": "#c8c6c9",
+                        "surface": "#131313",
+                        "secondary-container": "#47464a",
+                        "on-error-container": "#ffdad6",
+                        "surface-variant": "#353534",
+                        "text-low-emphasis": "#EDEDED",
+                        "primary-fixed-dim": "#F61212",
+                        "surface-container-high": "#2a2a2a",
+                        "inverse-surface": "#e5e2e1",
+                        "background": "#131313",
+                        "error-container": "#93000a",
+                        "secondary-fixed": "#e4e1e5",
+                        "surface-container-highest": "#353534",
+                        "on-tertiary-fixed-variant": "#004e5b",
+                        "on-primary-fixed": "#001f27",
+                        "on-secondary": "#303033",
+                        "on-secondary-container": "#b6b4b8",
+                        "secondary": "#c8c6c9",
+                        "surface-tint": "#F61212",
+                        "primary-container": "#00b4d8",
+                        "on-primary-container": "#00414f",
+                        "on-surface-variant": "#bcc9ce",
+                        "on-secondary-fixed-variant": "#47464a",
+                        "on-tertiary": "#00363f",
+                        "outline-variant": "#3d494d",
+                        "surface-card": "#1C1C1C",
+                        "text-high-emphasis": "#FFFFFF",
+                        "on-primary": "#003642",
+                        "primary-fixed": "#b3ebff",
+                        "on-tertiary-fixed": "#001f26",
+                        "on-background": "#e5e2e1",
+                        "outline": "#869398",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-bright": "#3a3939",
+                        "tertiary": "#50d7f3",
+                        "tertiary-container": "#12b5d0",
+                        "on-surface": "#e5e2e1",
+                        "inverse-primary": "#00677d",
+                        "on-tertiary-container": "#00414d",
+                        "on-error": "#690005",
+                        "inverse-on-surface": "#313030",
+                        "primary": "#F61212",
+                        "on-primary-fixed-variant": "#004e5f",
+                        "surface-dim": "#131313",
+                        "tertiary-fixed": "#a8edff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "8rem",
+                        "mobile-margin": "1.25rem",
+                        "content-stack": "1rem",
+                        "grid-margin": "4rem",
+                        "grid-gutter": "1.5rem"
+                    },
+                    "fontFamily": {
+                        "display-xl-mobile": ["Montserrat"],
+                        "label-technical": ["JetBrains Mono"],
+                        "display-xl": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "cta-text": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "display-xl-mobile": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "900" }],
+                        "label-technical": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "display-xl": ["84px", { "lineHeight": "90px", "letterSpacing": "-0.04em", "fontWeight": "900" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "cta-text": ["16px", { "lineHeight": "20px", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "38px", "fontWeight": "800" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased overflow-x-hidden selection:bg-primary selection:text-on-primary">
+<script src="./components/header.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="./components/hero-split-text.js"></script>
+<script src="./components/animated-content.js"></script>
+<script src="./components/magic-bento.js"></script>
+<script src="./components/logo-loop.js"></script>
+<!-- TopNavBar -->
+<nav class="bg-surface-container/80 backdrop-blur-xl dark:bg-surface-container/80 docked full-width top-0 sticky z-50 border-b border-white/10 flat no shadows w-full h-20 transition-all duration-300">
+<div class="max-w-[1440px] mx-auto h-full flex justify-between items-center px-mobile-margin md:px-grid-margin">
+<div class="flex items-center gap-8">
+<a class="flex items-center hover:scale-95 transition-transform duration-300" href="#"><img alt="Grupo CSF" class="h-10 w-auto object-contain" src="./img/csfgrouplogo.png"/></a>
+<div class="hidden md:flex gap-8 items-center ml-8">
+<a class="text-primary border-b-2 border-primary font-bold font-label-technical text-label-technical uppercase tracking-widest hover:text-primary transition-colors duration-300" href="#inicio">Inicio</a>
+<a class="text-on-surface-variant font-medium font-label-technical text-label-technical uppercase tracking-widest hover:text-primary transition-colors duration-300" href="#empresas">Empresas</a>
+<a class="text-on-surface-variant font-medium font-label-technical text-label-technical uppercase tracking-widest hover:text-primary transition-colors duration-300" href="./nosotros.html">Nosotros</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex gap-4">
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-300"><span class="material-symbols-outlined" data-icon="search">search</span></button>
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-300"><span class="material-symbols-outlined" data-icon="person">person</span></button>
+</div>
+<a class="hidden md:inline-flex bg-primary text-on-primary px-8 py-3 font-cta-text text-cta-text uppercase tracking-widest  transition-colors duration-300 hover:shadow-[0_0_15px_rgba(246,18,18,0.4)]" href="./contacto.html">CONTÁCTANOS</a>
+<button class="md:hidden text-on-surface hover:text-primary"><span class="material-symbols-outlined">menu</span></button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-screen flex items-start justify-center overflow-hidden" id="inicio">
+<div class="absolute inset-0 z-0">
+<img alt="Grupo CSF - ecosistema empresarial." class="w-full h-full object-cover object-center opacity-60" src="./img/ducati.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 w-full max-w-7xl px-mobile-margin md:px-grid-margin grid grid-cols-1 md:grid-cols-12 gap-grid-gutter pt-32 md:pt-40">
+<div class="md:col-span-8 flex flex-col justify-end gap-content-stack">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-text-high-emphasis uppercase italic leading-none">
+<span data-split-text="chars">Movemos oportunidades,</span> <br/><span class="text-primary text-glow" data-split-text="chars">construimos futuro</span>
+</h1>
+<p class="font-body-lg text-body-lg text-text-low-emphasis max-w-2xl mt-4 border-l-2 border-primary pl-4" data-split-text="words">CSF Group es un ecosistema empresarial que integra soluciones especializadas en tecnología, movilidad e inversión, creando oportunidades y servicios que generan valor para las personas. A través de nuestras diferentes unidades de negocio, conectamos innovación, experiencia y confianza para ofrecer soluciones prácticas adaptadas a las necesidades de cada cliente.</p>
+<div class="flex flex-col sm:flex-row gap-4 mt-8">
+<a class="bg-primary text-on-primary px-10 py-5 font-cta-text text-cta-text uppercase tracking-widest text-center  transition-all duration-300 hover:shadow-[0_0_20px_rgba(246,18,18,0.6)] clip-path-slant flex items-center justify-center gap-2" data-anim-delay="0.6" data-anim-direction="horizontal" data-anim-distance="80" data-anim-duration="1" data-anim-ease="power3.out" data-animate-content="" href="#empresas">
+                        CONOCE NUESTRAS EMPRESAS
+</a>
+</div>
+<div class="logoloop mt-10" data-direction="left" data-hover-speed="15" data-logo-loop="" data-speed="60" style="--logoloop-gap:64px;--logoloop-logoHeight:64px;" aria-label="Empresas del grupo CSF">
+<div class="logoloop__track" data-logoloop-track="">
+<ul class="logoloop__list" data-logoloop-seq="" role="list">
+<li class="logoloop__item" role="listitem"><a href="https://csfrentals.com" rel="noopener" target="_blank"><img alt="CSF Rentals" src="./img/rentals.png" style="filter:brightness(0) invert(1);"/></a></li>
+<li class="logoloop__item" role="listitem"><a href="https://csfsoftware.com" rel="noopener" target="_blank"><img alt="CSF Software" src="./img/software.png" style="filter:brightness(0) invert(1);"/></a></li>
+<li class="logoloop__item" role="listitem"><a href="https://csfcompraventa.com" rel="noopener" target="_blank"><img alt="CSF Compraventa" src="./img/compraventa.png" style="filter:brightness(0) invert(1);"/></a></li>
+<li class="logoloop__item" role="listitem"><a href="https://csf-investments.com" rel="noopener" target="_blank"><img alt="CSF Investments" src="./img/investments.png" style="filter:brightness(0) invert(1);"/></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- 1. Descripción del Grupo -->
+<section class="py-section-gap px-mobile-margin md:px-grid-margin max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-text-high-emphasis uppercase italic">UN ECOSISTEMA <span class="text-primary">EMPRESARIAL</span></h2>
+<p class="font-body-lg text-body-lg text-text-low-emphasis mt-4 max-w-2xl mx-auto">CSF Group integra soluciones especializadas en tecnología, movilidad e inversión para personas y empresas en Colombia.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8" data-bento-section="" data-spotlight-radius="320" data-spotlight-color="246, 18, 18">
+<div class="star-border-container" data-magic-bento="" data-glow-color="246, 18, 18">
+<div class="border-gradient-bottom" style="background: radial-gradient(circle, #F61212, transparent 10%); animation-duration: 5s;"></div>
+<div class="border-gradient-top" style="background: radial-gradient(circle, #F61212, transparent 10%); animation-duration: 5s;"></div>
+<div class="inner-content bg-surface-container p-8 border-t-4 border-primary">
+<h3 class="font-headline-md text-headline-md text-text-high-emphasis mb-6 flex items-center gap-3">
+                QUÉ HACEMOS
+            </h3>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<span class="font-body-md text-body-md text-text-low-emphasis">Conectamos movilidad, tecnología e inversión bajo un mismo ecosistema empresarial.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<span class="font-body-md text-body-md text-text-low-emphasis">Ofrecemos soluciones especializadas a través de nuestras 4 unidades de negocio.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<span class="font-body-md text-body-md text-text-low-emphasis">Impulsamos oportunidades de crecimiento en todo el país.</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="star-border-container" data-magic-bento="" data-glow-color="80, 215, 243">
+<div class="border-gradient-bottom" style="background: radial-gradient(circle, #50d7f3, transparent 10%); animation-duration: 5s;"></div>
+<div class="border-gradient-top" style="background: radial-gradient(circle, #50d7f3, transparent 10%); animation-duration: 5s;"></div>
+<div class="inner-content bg-surface-container p-8 border-t-4 border-tertiary">
+<h3 class="font-headline-md text-headline-md text-text-high-emphasis mb-6 flex items-center gap-3">
+                A QUIÉN SERVIMOS
+            </h3>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary mt-1">check_circle</span>
+<span class="font-body-md text-body-md text-text-low-emphasis">Personas naturales que buscan movilidad, tecnología o inversión confiable.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary mt-1">check_circle</span>
+<span class="font-body-md text-body-md text-text-low-emphasis">PyMEs que necesitan equipos, soluciones tecnológicas o alianzas estratégicas.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary mt-1">check_circle</span>
+<span class="font-body-md text-body-md text-text-low-emphasis">Inversionistas interesados en inmuebles y activos en Colombia.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. Nuestras Empresas -->
+<section class="py-section-gap bg-surface-container-lowest" id="empresas">
+<div class="max-w-[1600px] mx-auto px-mobile-margin md:px-grid-margin">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-text-high-emphasis uppercase italic text-center mb-16">NUESTRAS <span class="text-primary">EMPRESAS</span></h2>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8" data-bento-section="" data-spotlight-radius="320" data-spotlight-color="246, 18, 18">
+<a class="group relative flex flex-col justify-between overflow-hidden bg-surface-container p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors duration-300" href="https://csfrentals.com" rel="noopener" target="_blank" data-magic-bento="" data-glow-color="246, 18, 18">
+<div>
+<img alt="CSF Rentals" class="w-full aspect-[3/2] object-cover mb-4" src="img/cardrentals.png"/>
+<h3 class="font-headline-md text-headline-md text-text-high-emphasis uppercase italic mb-2">Rentals</h3>
+<p class="font-body-md text-body-md text-text-low-emphasis mb-6">Abiertos desde mayo 2025, ya somos la referencia en alquiler de motos premium en Medellín. Más de 1,200 personas han rentado con nosotros y hoy operamos 130+ motocicletas en inventario. Segunda sede activa, Bogotá próximamente.</p>
+</div>
+<span class="font-label-technical text-label-technical text-primary uppercase tracking-widest flex items-center gap-2">csfrentals.com <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span></span>
+</a>
+<a class="group relative flex flex-col justify-between overflow-hidden bg-surface-container p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors duration-300" href="https://csfsoftware.com" rel="noopener" target="_blank" data-magic-bento="" data-glow-color="246, 18, 18">
+<div>
+<img alt="CSF Software" class="w-full aspect-[3/2] object-cover mb-4" src="img/cardsoftware.png"/>
+<h3 class="font-headline-md text-headline-md text-text-high-emphasis uppercase italic mb-2">Software</h3>
+<p class="font-body-md text-body-md text-text-low-emphasis mb-6">Más de 6 años y 10,000+ clientes respaldan nuestra trayectoria en soluciones tecnológicas para empresas. Alquiler de equipos y soporte especializado adaptado a cada operación.</p>
+</div>
+<span class="font-label-technical text-label-technical text-primary uppercase tracking-widest flex items-center gap-2">csfsoftware.com <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span></span>
+</a>
+<a class="group relative flex flex-col justify-between overflow-hidden bg-surface-container p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors duration-300" href="https://csfcompraventa.com" rel="noopener" target="_blank" data-magic-bento="" data-glow-color="246, 18, 18">
+<div>
+<img alt="CSF Compraventa" class="w-full aspect-[3/2] object-cover mb-4" src="img/cardcompraventa.png"/>
+<h3 class="font-headline-md text-headline-md text-text-high-emphasis uppercase italic mb-2">Compraventa</h3>
+<p class="font-body-md text-body-md text-text-low-emphasis mb-6">Compra o vende tu motocicleta de alto cilindraje con total confianza. Un proceso transparente, ágil y respaldado por expertos en movilidad premium.</p>
+</div>
+<span class="font-label-technical text-label-technical text-primary uppercase tracking-widest flex items-center gap-2">csfcompraventa.com <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span></span>
+</a>
+<a class="group relative flex flex-col justify-between overflow-hidden bg-surface-container p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors duration-300" href="https://csf-investments.com" rel="noopener" target="_blank" data-magic-bento="" data-glow-color="246, 18, 18">
+<div>
+<img alt="CSF Investments" class="w-full aspect-[3/2] object-cover mb-4" src="img/cardinversiones.png"/>
+<h3 class="font-headline-md text-headline-md text-text-high-emphasis uppercase italic mb-2">Investments</h3>
+<p class="font-body-md text-body-md text-text-low-emphasis mb-6">Oportunidades de inversión en inmuebles y activos en Colombia. Conectamos a inversionistas con proyectos sólidos y retornos confiables.</p>
+</div>
+<span class="font-label-technical text-label-technical text-primary uppercase tracking-widest flex items-center gap-2">csf-investments.com <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span></span>
+</a>
+</div>
+</div>
+</section>
+<!-- 3. Benefits -->
+<section class="py-section-gap px-mobile-margin md:px-grid-margin max-w-7xl mx-auto">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-text-high-emphasis uppercase italic text-center mb-20">¿POR QUÉ <span class="text-primary">ELEGIRNOS?</span></h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="flex flex-col items-center text-center">
+<div class="w-20 h-20 bg-surface-container rounded-full flex items-center justify-center mb-6 border border-primary/30">
+<span class="material-symbols-outlined text-primary text-4xl">verified_user</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-text-high-emphasis uppercase italic mb-4">RESPALDO EMPRESARIAL</h3>
+<p class="font-body-md text-body-md text-text-low-emphasis">Un grupo consolidado que respalda cada una de sus unidades de negocio con solidez y experiencia.</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-20 h-20 bg-surface-container rounded-full flex items-center justify-center mb-6 border border-primary/30">
+<span class="material-symbols-outlined text-primary text-4xl">hub</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-text-high-emphasis uppercase italic mb-4">SOLUCIONES INTEGRALES</h3>
+<p class="font-body-md text-body-md text-text-low-emphasis">Tecnología, movilidad e inversión bajo un mismo ecosistema, adaptado a tus necesidades.</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-20 h-20 bg-surface-container rounded-full flex items-center justify-center mb-6 border border-primary/30">
+<span class="material-symbols-outlined text-primary text-4xl">trending_up</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-text-high-emphasis uppercase italic mb-4">CRECIMIENTO CONJUNTO</h3>
+<p class="font-body-md text-body-md text-text-low-emphasis">Impulsamos oportunidades para personas naturales y PyMEs en toda Colombia.</p>
+</div>
+</div>
+</section>
+<!-- 7. FAQ -->
+<section class="py-section-gap px-mobile-margin md:px-grid-margin max-w-3xl mx-auto">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-text-high-emphasis uppercase italic text-center mb-12">PREGUNTAS <span class="text-primary">FRECUENTES</span></h2>
+<div class="space-y-4">
+<details class="bg-surface-container p-6 group cursor-pointer border-l-2 border-transparent hover:border-primary transition-colors">
+<summary class="font-cta-text text-cta-text text-text-high-emphasis flex justify-between items-center outline-none">
+                ¿Qué es Grupo CSF?
+                <span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-text-low-emphasis mt-4 pt-4 border-t border-white/10">Grupo CSF es un ecosistema empresarial colombiano que integra soluciones especializadas en tecnología, movilidad e inversión a través de sus 4 empresas.</p>
+</details>
+<details class="bg-surface-container p-6 group cursor-pointer border-l-2 border-transparent hover:border-primary transition-colors">
+<summary class="font-cta-text text-cta-text text-text-high-emphasis flex justify-between items-center outline-none">
+                ¿Cómo contacto a una empresa específica del grupo?
+                <span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-text-low-emphasis mt-4 pt-4 border-t border-white/10">Puedes escribirnos a través de nuestro formulario de contacto seleccionando la empresa de tu interés, o visitar directamente el sitio web de cada unidad de negocio.</p>
+</details>
+<details class="bg-surface-container p-6 group cursor-pointer border-l-2 border-transparent hover:border-primary transition-colors">
+<summary class="font-cta-text text-cta-text text-text-high-emphasis flex justify-between items-center outline-none">
+                ¿Grupo CSF atiende a personas naturales y empresas?
+                <span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-text-low-emphasis mt-4 pt-4 border-t border-white/10">Sí. Nuestras soluciones están diseñadas tanto para personas naturales como para pequeñas y medianas empresas (PyMEs) en Colombia.</p>
+</details>
+</div>
+</section>
+<!-- 8. Primary CTA -->
+<section class="relative py-32 overflow-hidden flex items-center justify-center text-center">
+<div class="absolute inset-0 z-0">
+<img alt="Grupo CSF - construyendo futuro" class="w-full h-full object-cover opacity-40 mix-blend-luminosity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0toLf6_p0B1rubvRIADlHjQKkKGd40MOFUuO5euAgZeN54hvOaNgXTGsvQAJw58wz8f3ufTd3NgUXQmn0UIGy-bJZtbDRaLH5MC0miJG1KlDfqzYJHJhmIyx_xA6n8zGvLLld92L9d9uQIMvDyt1tm1sYuxoXSN000g3K-2rSDYrS1TSzFX1z9mWUiLHYG5xysde4RTL4lWZBWGC69bK_HuyDzLlTHh2EcGxl8v_EQ6l7_eRqyjJrcf9so0akCdh-4FEKuLNYNKo"/>
+<div class="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-surface-container-lowest"></div>
+</div>
+<div class="relative z-10 max-w-4xl px-mobile-margin">
+<h2 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-text-high-emphasis uppercase italic leading-none mb-8">CONSTRUYAMOS <br/><span class="text-primary text-glow">EL FUTURO JUNTOS</span></h2>
+<p class="font-body-lg text-body-lg text-text-low-emphasis mb-10 max-w-2xl mx-auto">Un ecosistema empresarial listo para acompañarte. Descubre la empresa del grupo que se ajusta a lo que necesitas y hablemos.</p>
+<a class="inline-flex bg-primary text-on-primary px-12 py-6 font-cta-text text-cta-text uppercase tracking-widest  transition-all duration-300 hover:shadow-[0_0_30px_rgba(246,18,18,0.6)] clip-path-slant items-center justify-center gap-3 text-lg" href="./contacto.html">
+            CONTÁCTANOS <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest full-width bottom-0 bg-surface-container-high border-t border-white/5 flat no shadows flex flex-col md:flex-row justify-between items-center py-12 px-grid-margin gap-content-stack w-full mt-section-gap">
+<div class="flex flex-col items-center md:items-start gap-4">
+<img alt="Grupo CSF" class="h-20 w-auto object-contain" src="./img/csfgrouplogo.png"/>
+<p class="font-label-technical text-label-technical text-on-surface-variant">© 2026 GRUPO CSF. MOVEMOS OPORTUNIDADES, CONSTRUIMOS FUTURO.</p>
+<p class="font-label-technical text-label-technical text-on-surface-variant/70 text-xs">GRUPO CSF S.A.S. · NIT [PENDIENTE] · Medellín, Colombia</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-label-technical text-label-technical text-on-surface-variant hover:text-tertiary transition-all duration-200" href="#empresas">Empresas</a>
+<a class="font-label-technical text-label-technical text-on-surface-variant hover:text-tertiary transition-all duration-200" href="./nosotros.html">Nosotros</a>
+<a class="font-label-technical text-label-technical text-on-surface-variant hover:text-tertiary transition-all duration-200" href="./contacto.html">Contacto</a>
+<a class="font-label-technical text-label-technical text-on-surface-variant hover:text-tertiary transition-all duration-200" href="#">Política de Privacidad</a>
+</div>
+</footer>
+</body></html>
