@@ -1,7 +1,7 @@
 function renderHeader() {
-  const currentPage = window.location.pathname.split('/').pop() || 'code.html';
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
-  const isHome = currentPage === 'code.html' || currentPage === '';
+  const isHome = currentPage === 'index.html' || currentPage === '';
   const isNosotros = currentPage === 'nosotros.html';
   const isContacto = currentPage === 'contacto.html';
 
@@ -13,12 +13,12 @@ function renderHeader() {
     <nav class="bg-surface-container/80 backdrop-blur-xl dark:bg-surface-container/80 docked full-width top-0 sticky z-50 border-b border-white/10 flat no shadows w-full h-20 transition-all duration-300">
       <div class="max-w-[1440px] mx-auto h-full flex justify-between items-center px-mobile-margin md:px-grid-margin">
         <div class="flex items-center gap-8">
-          <a class="flex items-center hover:scale-95 transition-transform duration-300" href="./code.html">
+          <a class="flex items-center hover:scale-95 transition-transform duration-300" href="./index.html">
             <img src="./img/csfgrouplogo.png" alt="Grupo CSF" class="h-10 w-auto" />
           </a>
           <div class="hidden md:flex gap-8 items-center ml-8">
-            <a id="nav-inicio" class="${navBaseClasses} ${isHome ? activeClasses : inactiveClasses}" href="./code.html#inicio">Inicio</a>
-            <a id="nav-empresas" class="${navBaseClasses} ${inactiveClasses}" href="./code.html#empresas">Empresas</a>
+            <a id="nav-inicio" class="${navBaseClasses} ${isHome ? activeClasses : inactiveClasses}" href="./index.html#inicio">Inicio</a>
+            <a id="nav-empresas" class="${navBaseClasses} ${inactiveClasses}" href="./index.html#empresas">Empresas</a>
             <a id="nav-nosotros" class="${navBaseClasses} ${isNosotros ? activeClasses : inactiveClasses}" href="./nosotros.html">Nosotros</a>
           </div>
         </div>
