@@ -128,6 +128,11 @@ input[type="submit"][class*="bg-primary"]:hover {
   }
 }
 
+/* Nav links: match site's Montserrat typography (size/weight unchanged) */
+nav a.font-label-technical {
+  font-family: 'Montserrat', sans-serif;
+}
+
 /* Form Elements */
 input:focus,
 textarea:focus,
