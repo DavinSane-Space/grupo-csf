@@ -144,7 +144,9 @@ select:focus {
 .logoloop {
   position: relative;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: visible;
+  padding: 12px 0;
   --logoloop-gap: 64px;
   --logoloop-logoHeight: 64px;
   mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
