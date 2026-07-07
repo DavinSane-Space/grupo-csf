@@ -24,8 +24,14 @@ function renderHeader() {
         </div>
         <div class="flex items-center gap-6">
           <a class="hidden md:inline-flex bg-primary text-on-primary px-8 py-3 font-cta-text text-cta-text uppercase tracking-widest hover:bg-tertiary transition-colors duration-300 hover:shadow-[0_0_15px_rgba(246,18,18,0.4)]" href="./contacto.html">CONTÁCTANOS</a>
-          <button class="md:hidden text-on-surface hover:text-primary"><span class="material-symbols-outlined">menu</span></button>
+          <button data-menu-toggle class="md:hidden text-on-surface hover:text-primary"><span class="material-symbols-outlined">menu</span></button>
         </div>
+      </div>
+      <div data-mobile-menu class="hidden md:hidden flex flex-col w-full px-mobile-margin" style="background-color: #131313; padding: 1rem 2rem;">
+        <a id="nav-inicio-mobile" class="${navBaseClasses} ${isHome ? activeClasses : inactiveClasses}" style="font-size: 16px; padding-top: 12px; padding-bottom: 12px;" href="./index.html#inicio">Inicio</a>
+        <a id="nav-empresas-mobile" class="${navBaseClasses} ${inactiveClasses}" style="font-size: 16px; padding-top: 12px; padding-bottom: 12px;" href="./index.html#empresas">Empresas</a>
+        <a id="nav-nosotros-mobile" class="${navBaseClasses} ${isNosotros ? activeClasses : inactiveClasses}" style="font-size: 16px; padding-top: 12px; padding-bottom: 12px;" href="./nosotros.html">Nosotros</a>
+        <a class="bg-primary text-on-primary text-center px-8 py-3 font-cta-text text-cta-text uppercase tracking-widest hover:bg-tertiary transition-colors duration-300 mt-2" href="./contacto.html">CONTÁCTANOS</a>
       </div>
     </nav>
   `;
@@ -38,19 +44,39 @@ function renderHeader() {
   if (isHome) {
     setupHomeScrollSpy(activeClasses, inactiveClasses);
   }
+
+  setupMobileMenuToggle();
+}
+
+function setupMobileMenuToggle() {
+  const menuBtn = document.querySelector('[data-menu-toggle]')
+    || document.querySelector('button[class*="md:hidden"]');
+  const mobileMenu = document.querySelector('[data-mobile-menu]')
+    || document.querySelector('div[class*="hidden"][class*="md:hidden"]');
+
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
 }
 
 function setupHomeScrollSpy(activeClasses, inactiveClasses) {
   const navInicio = document.getElementById('nav-inicio');
   const navEmpresas = document.getElementById('nav-empresas');
+  const navInicioMobile = document.getElementById('nav-inicio-mobile');
+  const navEmpresasMobile = document.getElementById('nav-empresas-mobile');
   const sectionInicio = document.getElementById('inicio');
   const sectionEmpresas = document.getElementById('empresas');
 
   if (!navInicio || !navEmpresas || !sectionInicio || !sectionEmpresas) return;
 
-  const setActive = (link) => {
-    [navInicio, navEmpresas].forEach((el) => {
-      const isActive = el === link;
+  const inicioLinks = [navInicio, navInicioMobile].filter(Boolean);
+  const empresasLinks = [navEmpresas, navEmpresasMobile].filter(Boolean);
+
+  const setActive = (activeGroup) => {
+    [...inicioLinks, ...empresasLinks].forEach((el) => {
+      const isActive = activeGroup.includes(el);
       activeClasses.split(' ').forEach((c) => el.classList.toggle(c, isActive));
       inactiveClasses.split(' ').forEach((c) => el.classList.toggle(c, !isActive));
     });
@@ -60,7 +86,7 @@ function setupHomeScrollSpy(activeClasses, inactiveClasses) {
     (entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
-        setActive(entry.target.id === 'empresas' ? navEmpresas : navInicio);
+        setActive(entry.target.id === 'empresas' ? empresasLinks : inicioLinks);
       });
     },
     { rootMargin: '-40% 0px -55% 0px', threshold: 0 }
