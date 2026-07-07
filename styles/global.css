@@ -171,11 +171,23 @@ select:focus {
   margin-right: var(--logoloop-gap);
   display: flex;
   align-items: center;
+  justify-content: center;
+  height: var(--logoloop-logoHeight);
+  width: calc(var(--logoloop-logoHeight) * 2.6);
+}
+
+.logoloop__item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
 }
 
 .logoloop__item img {
-  height: var(--logoloop-logoHeight);
-  width: auto;
+  height: 100%;
+  width: 100%;
+  max-height: var(--logoloop-logoHeight);
   display: block;
   object-fit: contain;
   opacity: 0.6;
