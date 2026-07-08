@@ -21,7 +21,23 @@ document.addEventListener('DOMContentLoaded', () => {
         );
     }
 
-    // Hero headline / paragraph: char or word split reveal
+    // Hero paragraph: single blur + zoom-out reveal (no per-word stagger, appears all at once)
+    document.querySelectorAll('[data-blur-in]').forEach((el) => {
+        gsap.fromTo(
+            el,
+            { opacity: 0, filter: 'blur(12px)', scale: 1.08 },
+            {
+                opacity: 1,
+                filter: 'blur(0px)',
+                scale: 1,
+                duration: 1.1,
+                ease: 'power2.out',
+                delay: 0.4
+            }
+        );
+    });
+
+    // Hero headline: char or word split reveal
     document.querySelectorAll('[data-split-text]').forEach((el, index) => {
         const splitType = el.getAttribute('data-split-text') || 'chars';
         const split = new SplitText(el, {
