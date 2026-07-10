@@ -131,6 +131,8 @@
             }
         }
     </script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>emailjs.init("6yTaIAeJb_XTaL6Q5")</script>
 </head>
 <body class="bg-background text-on-surface font-body-md antialiased overflow-x-hidden selection:bg-primary selection:text-on-primary">
 <script src="./components/header.js"></script>
@@ -177,38 +179,39 @@
 <section class="pt-4 pb-14 md:pt-8 md:pb-section-gap px-mobile-margin md:px-grid-margin max-w-7xl mx-auto">
 <!-- Contact Form -->
 <div class="max-w-[700px] mx-auto">
-<form class="space-y-6 bg-surface-container p-8">
+<form class="space-y-6 bg-surface-container p-8" id="contact-form">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div>
 <label class="block font-body-md text-text-high-emphasis mb-2">Nombre Completo</label>
-<input type="text" class="w-full bg-surface-container-low border border-outline-variant text-text-high-emphasis px-4 py-3 focus:outline-none focus:border-primary transition-colors" placeholder="Tu nombre"/>
+<input type="text" name="nombre" class="w-full bg-surface-container-low border border-outline-variant text-text-high-emphasis px-4 py-3 focus:outline-none focus:border-primary transition-colors" placeholder="Tu nombre"/>
 </div>
 <div>
 <label class="block font-body-md text-text-high-emphasis mb-2">Email</label>
-<input type="email" class="w-full bg-surface-container-low border border-outline-variant text-text-high-emphasis px-4 py-3 focus:outline-none focus:border-primary transition-colors" placeholder="tu@email.com"/>
+<input type="email" name="email" class="w-full bg-surface-container-low border border-outline-variant text-text-high-emphasis px-4 py-3 focus:outline-none focus:border-primary transition-colors" placeholder="tu@email.com"/>
 </div>
 </div>
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div>
 <label class="block font-body-md text-text-high-emphasis mb-2">Teléfono</label>
-<input type="tel" class="w-full bg-surface-container-low border border-outline-variant text-text-high-emphasis px-4 py-3 focus:outline-none focus:border-primary transition-colors" placeholder="+1 (555) 123-4567"/>
+<input type="tel" name="telefono" class="w-full bg-surface-container-low border border-outline-variant text-text-high-emphasis px-4 py-3 focus:outline-none focus:border-primary transition-colors" placeholder="+1 (555) 123-4567"/>
 </div>
 <div>
 <label class="block font-body-md text-text-high-emphasis mb-2">Tipo de Consulta</label>
-<select class="w-full bg-surface-container-low border border-outline-variant text-text-high-emphasis px-4 py-3 focus:outline-none focus:border-primary transition-colors">
+<select name="tipo_consulta" class="w-full bg-surface-container-low border border-outline-variant text-text-high-emphasis px-4 py-3 focus:outline-none focus:border-primary transition-colors">
 <option value="">Selecciona una opción</option>
-<option value="rental">Reservar una Moto</option>
-<option value="info">Información General</option>
-<option value="corporate">Eventos Corporativos</option>
-<option value="other">Otro</option>
+<option value="CSF Rentals — Alquiler de motos">CSF Rentals — Alquiler de motos</option>
+<option value="CSF Software — Soluciones tecnológicas">CSF Software — Soluciones tecnológicas</option>
+<option value="CSF Compraventa — Compra y venta de motos">CSF Compraventa — Compra y venta de motos</option>
+<option value="CSF Investments — Inversión en inmuebles">CSF Investments — Inversión en inmuebles</option>
+<option value="Información general del grupo">Información general del grupo</option>
 </select>
 </div>
 </div>
 
 <div>
 <label class="block font-body-md text-text-high-emphasis mb-2">Mensaje</label>
-<textarea class="w-full bg-surface-container-low border border-outline-variant text-text-high-emphasis px-4 py-3 focus:outline-none focus:border-primary transition-colors h-32 resize-none" placeholder="Cuéntanos tu experiencia y qué necesitas..."></textarea>
+<textarea name="mensaje" class="w-full bg-surface-container-low border border-outline-variant text-text-high-emphasis px-4 py-3 focus:outline-none focus:border-primary transition-colors h-32 resize-none" placeholder="Cuéntanos tu experiencia y qué necesitas..."></textarea>
 </div>
 
 <div class="flex items-center gap-3">
@@ -344,4 +347,34 @@ Enviar Mensaje
 </div>
 </div>
 </footer>
+<script>
+document.getElementById('contact-form')
+  .addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const checkbox = document.querySelector('input[type="checkbox"]');
+    if (!checkbox.checked) {
+      alert('Debes aceptar los términos y política de privacidad');
+      return;
+    }
+
+    const btn = this.querySelector('button[type="submit"]');
+    btn.textContent = 'ENVIANDO...';
+    btn.disabled = true;
+
+    emailjs.sendForm(
+      'service_imk06ii',
+      'template_7k28i05',
+      '#contact-form'
+    ).then(() => {
+      btn.textContent = 'MENSAJE ENVIADO ✓';
+      btn.style.background = '#1a1a1a';
+      btn.style.border = '1px solid #F61212';
+      this.reset();
+    }).catch(() => {
+      btn.textContent = 'ERROR — INTENTA DE NUEVO';
+      btn.disabled = false;
+    });
+});
+</script>
 </body></html>
