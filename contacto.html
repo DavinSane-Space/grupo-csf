@@ -362,19 +362,25 @@ document.getElementById('contact-form')
     btn.textContent = 'ENVIANDO...';
     btn.disabled = true;
 
-    emailjs.sendForm(
-      'service_imk06ii',
-      'template_7k28i05',
-      '#contact-form'
-    ).then(() => {
-      btn.textContent = 'MENSAJE ENVIADO ✓';
-      btn.style.background = '#1a1a1a';
-      btn.style.border = '1px solid #F61212';
-      this.reset();
-    }).catch(() => {
-      btn.textContent = 'ERROR — INTENTA DE NUEVO';
-      btn.disabled = false;
-    });
+    const templateParams = {
+      nombre: document.querySelector('[name="nombre"]').value,
+      email: document.querySelector('[name="email"]').value,
+      telefono: document.querySelector('[name="telefono"]').value,
+      tipo_consulta: document.querySelector('[name="tipo_consulta"]').value,
+      mensaje: document.querySelector('[name="mensaje"]').value,
+    };
+
+    emailjs.send('service_imk06ii', 'template_7k28i05', templateParams)
+      .then(() => {
+        btn.textContent = 'MENSAJE ENVIADO ✓';
+        btn.style.background = '#1a1a1a';
+        btn.style.border = '1px solid #F61212';
+        document.getElementById('contact-form').reset();
+      }).catch((error) => {
+        console.error('Error:', error);
+        btn.textContent = 'ERROR — INTENTA DE NUEVO';
+        btn.disabled = false;
+      });
 });
 </script>
 </body></html>
